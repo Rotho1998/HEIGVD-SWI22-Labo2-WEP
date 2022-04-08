@@ -69,6 +69,14 @@ Dans cette partie, vous allez enrichir votre script développé dans la partie p
 - Pour un test encore plus intéressant (optionnel), vous pouvez utiliser un AP (disponible sur demande) et envoyer vos fragments. Pour que l’AP accepte vous données injectées, il faudra faire une « fake authentication » que vous pouvez faire avec `aireplay-ng`
 - Si l’AP accepte vos fragments, il les recomposera et les retransmettra en une seule trame non-fragmentée !
 
+Wireshark recompose correctement les fragments :
+
+![image-20220408161955321](images/image-20220408161955321.png)
+
+![image-20220408162029629](images/image-20220408162029629.png)
+
+![image-20220408161701644](images/image-20220408161701644.png)
+
 ## Livrables
 
 Un fork du repo original . Puis, un Pull Request contenant :

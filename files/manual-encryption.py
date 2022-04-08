@@ -25,9 +25,12 @@ seed = iv + key
 # Calcul de l'icv avec crc32, et conversion en bytes
 icv = zlib.crc32(message).to_bytes(4, byteorder='little')
 
+# Création du payload
+payload = message + icv
+
 # Encryption du message avec son icv en utilisant un cipher généré par RC4
 cipher = RC4(seed)
-ciphertext = cipher.crypt(message + icv)
+ciphertext = cipher.crypt(payload)
 
 # Création de la trame avec les paramètres générés
 arp = rdpcap('arp.cap')[0]
